@@ -1,4 +1,4 @@
-
+SHELL := /usr/bin/env bash
 
 # Directory definitions
 SRC = src
