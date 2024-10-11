@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 
-# Directory definitionss
+# Directory definition
 SRC = src
 DATA_PREP =	$(SRC)/data_preparation
 ANALYSIS =	$(SRC)/analysis
@@ -28,7 +28,3 @@ clean:
 	@$(MAKE) -C	$(DATA_PREP) clean
 	@$(MAKE) -C	$(ANALYSIS) clean
 	@$(MAKE) -C	$(PAPER) clean
-
-
-
-

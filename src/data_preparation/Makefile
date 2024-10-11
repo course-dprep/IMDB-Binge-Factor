@@ -1,5 +1,5 @@
-
 SHELL := /usr/bin/env bash
+
 
 # Directory definitions
 ROOT_DIR = ../..

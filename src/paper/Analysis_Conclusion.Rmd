@@ -81,10 +81,11 @@ Some points exhibit high leverage and fall outside the Cook’s distance line, i
 ### a. Summary:
 
 ```{r,results='asis',include=TRUE,echo = FALSE,warning=FALSE,message=FALSE}
-
+cat("```\n")
 cat(readLines("../../gen/output/model_summary.txt"),sep="\n")
-
+cat("```")
 ```
+
 
 ### b. Inference: 
 
