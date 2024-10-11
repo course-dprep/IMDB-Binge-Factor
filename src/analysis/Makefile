@@ -24,5 +24,5 @@ $(OUTPUT)/regression_model_summary.html: $(REGRESSION_SCRIPT) $(OUTPUT)/cleaned_
 
 # Clean 
 clean:
-	rm -f $(OUTPUT)/regression_model_summary.html
+	Rscript -e "unlink('$(OUTPUT)/regression_model_summary.html', recursive=F)"
 

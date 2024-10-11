@@ -23,5 +23,5 @@ $(OUTPUT)/analysis_conclusion.html: $(PAPER)/analysis_conclusion.Rmd
 
 # Clean up generated HTML reports
 clean:
-	rm -f $(OUTPUT)/*.html
+	Rscript -e "unlink('$(OUTPUT)/*.html', recursive=F)"
 
