@@ -2,10 +2,27 @@
 .Rhistory
 .RData
 .Ruserdata
+.gitattributes
 
-# Ignore large datasets and output files
+# Ignore raw datasets 
 data/
 !data/.gitkeep
 
-gen/output/
+# Ignore temporary generated data
+gen/temp/
+
+# Allow output 
+
+gen/output
+!gen/output/*.html
+!gen/output/*.pdf
 !gen/output/.gitkeep
+
+*.html
+*.pdf
+*.csv
+
+data/*.tsv.gz
+
+README_files/*
+!README_files/plots/
