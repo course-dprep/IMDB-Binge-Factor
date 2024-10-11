@@ -1,6 +1,6 @@
 SHELL := /usr/bin/env bash
 
-# Directory definitions
+# Directory definitionss
 SRC = src
 DATA_PREP =	$(SRC)/data_preparation
 ANALYSIS =	$(SRC)/analysis
