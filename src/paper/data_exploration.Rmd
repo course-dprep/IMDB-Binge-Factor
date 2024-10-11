@@ -255,7 +255,7 @@ title_ratings <- read_delim(gzfile('../../data/title_ratings.tsv.gz'), delim = "
 
 ```
 
-### 6.2. Motivation for dropping missing values (NA)
+### 6.2. Imputing for missing values 
 
 #### title_basics:
 
