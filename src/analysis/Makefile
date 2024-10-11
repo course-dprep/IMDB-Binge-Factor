@@ -17,12 +17,13 @@ all: $(OUTPUT)/regression_model_summary.html
 
 # Run Regression Model 2
 $(OUTPUT)/regression_model_summary.html: $(REGRESSION_SCRIPT) $(OUTPUT)/cleaned_data.csv
-	@mkdir -p $(OUTPUT)
+	R -e "dir.create('$(OUTPUT)')"
 	Rscript --vanilla "$(REGRESSION_SCRIPT)"
+
 
 .PHONY: all clean
 
 # Clean 
 clean:
-	Rscript -e "unlink('$(OUTPUT)/regression_model_summary.html', recursive=F)"
+	Rscript -e "unlink('$(OUTPUT)/*.*', recursive=F)"
 
