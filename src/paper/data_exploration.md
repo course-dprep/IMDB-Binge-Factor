@@ -95,7 +95,7 @@ The dataset used in the project contains information about TV series and episode
 
 ```
 ##     tconst           titleType         primaryTitle       originalTitle     
-##  Length:11144942    Length:11144942    Length:11144942    Length:11144942   
+##  Length:11150737    Length:11150737    Length:11150737    Length:11150737   
 ##  Class :character   Class :character   Class :character   Class :character  
 ##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
 ##                                                                             
@@ -106,12 +106,12 @@ The dataset used in the project contains information about TV series and episode
 ##  Min.   :   0.0000   Min.   :1874      Min.   :   3       Min.   :    0    
 ##  1st Qu.:   0.0000   1st Qu.:2001      1st Qu.:2000       1st Qu.:   19    
 ##  Median :   0.0000   Median :2013      Median :2013       Median :   30    
-##  Mean   :   0.1455   Mean   :2006      Mean   :2007       Mean   :   43    
+##  Mean   :   0.1454   Mean   :2006      Mean   :2007       Mean   :   43    
 ##  3rd Qu.:   0.0000   3rd Qu.:2019      3rd Qu.:2019       3rd Qu.:   60    
 ##  Max.   :2024.0000   Max.   :2031      Max.   :2030       Max.   :59460    
-##  NA's   :1           NA's   :1415824   NA's   :11014156   NA's   :7630294  
+##  NA's   :1           NA's   :1415823   NA's   :11019859   NA's   :7634240  
 ##     genres         
-##  Length:11144942   
+##  Length:11150737   
 ##  Class :character  
 ##  Mode  :character  
 ##                    
@@ -126,13 +126,13 @@ The dataset used in the project contains information about TV series and episode
 
 ```
 ##     tconst          parentTconst        seasonNumber     episodeNumber    
-##  Length:8553624     Length:8553624     Min.   :   1.0    Min.   :    0.0  
+##  Length:8555940     Length:8555940     Min.   :   1.0    Min.   :    0.0  
 ##  Class :character   Class :character   1st Qu.:   1.0    1st Qu.:    7.0  
 ##  Mode  :character   Mode  :character   Median :   1.0    Median :   28.0  
 ##                                        Mean   :   3.8    Mean   :  425.3  
 ##                                        3rd Qu.:   3.0    3rd Qu.:  159.0  
 ##                                        Max.   :2024.0    Max.   :91334.0  
-##                                        NA's   :1725429   NA's   :1725429
+##                                        NA's   :1725820   NA's   :1725820
 ```
 
 #### title_ratings
@@ -140,12 +140,12 @@ The dataset used in the project contains information about TV series and episode
 
 ```
 ##     tconst          averageRating       numVotes      
-##  Length:1485200     Min.   : 1.000   Min.   :      5  
+##  Length:1485615     Min.   : 1.000   Min.   :      5  
 ##  Class :character   1st Qu.: 6.200   1st Qu.:     11  
 ##  Mode  :character   Median : 7.200   Median :     26  
 ##                     Mean   : 6.959   Mean   :   1030  
 ##                     3rd Qu.: 7.900   3rd Qu.:    101  
-##                     Max.   :10.000   Max.   :2948962
+##                     Max.   :10.000   Max.   :2949309
 ```
 
 
@@ -157,7 +157,7 @@ The dataset used in the project contains information about TV series and episode
 
 | num_rows| num_cols| missing_values_tconst| missing_values_parentTconst| missing_values_seasonNumber| missing_values_episodeNumber|
 |--------:|--------:|---------------------:|---------------------------:|---------------------------:|----------------------------:|
-|  8553624|        4|                     0|                           0|                     1725429|                      1725429|
+|  8555940|        4|                     0|                           0|                     1725820|                      1725820|
 
 
 #### title_ratings
@@ -165,7 +165,7 @@ The dataset used in the project contains information about TV series and episode
 
 | num_rows| num_cols| missing_values_tconst| missing_values_averageRating| missing_values_numVotes|
 |--------:|--------:|---------------------:|----------------------------:|-----------------------:|
-|  1485200|        3|                     0|                            0|                       0|
+|  1485615|        3|                     0|                            0|                       0|
 
 
 #### title_basics
@@ -173,7 +173,7 @@ The dataset used in the project contains information about TV series and episode
 
 | num_rows| num_cols| missing_values_tconst| missing_values_titleType| missing_values_startYear| missing_values_endYear|
 |--------:|--------:|---------------------:|------------------------:|------------------------:|----------------------:|
-| 11144942|        9|                     0|                        0|                  1415824|               11014156|
+| 11150737|        9|                     0|                        0|                  1415823|               11019859|
 
 
 ## 5. Visualization : raw data
@@ -197,7 +197,7 @@ As the Research Question is limited only to TV series other `titleType` are drop
 
 
 
-### 6.2. Motivation for dropping missing values (NA)
+### 6.2. Imputing for missing values 
 
 #### title_basics:
 
@@ -221,7 +221,7 @@ This dataset does not contain missing values(NA)
 
 ```
 ##     tconst           titleType         primaryTitle       originalTitle     
-##  Length:248975      Length:248975      Length:248975      Length:248975     
+##  Length:249059      Length:249059      Length:249059      Length:249059     
 ##  Class :character   Class :character   Class :character   Class :character  
 ##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
 ##                                                                             
@@ -235,9 +235,9 @@ This dataset does not contain missing values(NA)
 ##  Mean   :0.01097   Mean   :2007   Mean   :2009   Mean   :  45.85  
 ##  3rd Qu.:0.00000   3rd Qu.:2018   3rd Qu.:2018   3rd Qu.:  55.00  
 ##  Max.   :1.00000   Max.   :2026   Max.   :2030   Max.   :8400.00  
-##                                                  NA's   :147488   
+##                                                  NA's   :147543   
 ##     genres          startYear_group
-##  Length:248975      Min.   :1920   
+##  Length:249059      Min.   :1920   
 ##  Class :character   1st Qu.:1995   
 ##  Mode  :character   Median :2010   
 ##                     Mean   :2000   
@@ -252,7 +252,7 @@ This dataset does not contain missing values(NA)
 
 ```
 ##     tconst          parentTconst        seasonNumber      episodeNumber    
-##  Length:6828195     Length:6828195     Min.   :   1.000   Min.   :    0.0  
+##  Length:6830120     Length:6830120     Min.   :   1.000   Min.   :    0.0  
 ##  Class :character   Class :character   1st Qu.:   1.000   1st Qu.:    7.0  
 ##  Mode  :character   Mode  :character   Median :   1.000   Median :   28.0  
 ##                                        Mean   :   3.795   Mean   :  425.3  
