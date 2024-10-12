@@ -195,7 +195,7 @@ The analysis findings suggest that both `total_years` and `episode_count` have s
 
 ### Software
 
-For the analysis, downloading, cleaning and regression analysis was done using R and Rstudio. To automate the workflow a makefile is created.Git bash is used additionally to run the analysis from the terminal.
+For the  downloading, cleaning and regression analysis, R and Rstudio was used. To automate the workflow a makefile is created.The makefiles can be run from the terminal.
 
 #### For R make sure the following packages are installed
 
@@ -209,18 +209,17 @@ For the analysis, downloading, cleaning and regression analysis was done using R
     install.packages("here")
     install.packages("kableExtra")
     install.packages("car")
-
     install.packages("tidyverse")
 
 
 ## 7. Running Instructions
 
-Running the makefile in the root directory will run each source code in the right sequence leading eventually to the results of the analysis. 
+Running the makefile in the root directory will run each source code in the right sequence leading eventually to the regression summary and then goes on to render two html documents for data exploration and analysis & conclusion. 
 
 Step 1: Fork the repository to your GitHub account  
 
 
-Step 2: Use gitbash to clone the repository to your local computer after choosing a working directory. Use the url below for cloning.
+Step 2: Use the terminal to clone the repository to your local computer after choosing a working directory. Use the url below for cloning.
 
 ```markdown
 
