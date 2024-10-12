@@ -210,6 +210,9 @@ For the analysis, downloading, cleaning and regression analysis was done using R
     install.packages("kableExtra")
     install.packages("car")
 
+    install.packages("tidyverse")
+
+
 ## 7. Running Instructions
 
 Running the makefile in the root directory will run each source code in the right sequence leading eventually to the results of the analysis. 

@@ -11,7 +11,8 @@ data/
 # Ignore temporary generated data
 gen/temp/
 
-# Allow output 
+# Allow output files to be committed
+
 
 gen/output
 !gen/output/*.html
@@ -24,5 +25,7 @@ gen/output
 
 data/*.tsv.gz
 
-README_files/*
-!README_files/plots/
+
+
+
+

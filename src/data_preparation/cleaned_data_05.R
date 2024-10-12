@@ -8,12 +8,10 @@
 library(dplyr)
 library(tidyverse)
 
-engineered_data <- read_csv("gen/output/engineered_data.csv")
-
-stopifnot(sum(is.na(engineered_data$total_years))==0)
+engineered_data <- read_csv("../../gen/temp/engineered_data.csv")
 
 # --- Function for Removing Outliers --- #
-# Define a function to remove outliers using the IQR method
+# function to remove outliers using the IQR method
 remove_outliers_iqr <- function(column) {
   Q1 <- quantile(column, 0.25, na.rm=TRUE)  # Calculate the 25th percentile
   Q3 <- quantile(column, 0.75, na.rm=TRUE)  # Calculate the 75th percentile
@@ -31,7 +29,7 @@ cleaned_data <- engineered_data[
   rowSums(sapply(engineered_data[columns_to_check], remove_outliers_iqr)) == length(columns_to_check), 
 ]
 
-# Makefile_Rscript
+
 # --- Save Data --- #
-write.csv(cleaned_data, file = "gen/output/cleaned_data.csv", row.names = FALSE)
+write.csv(cleaned_data, file = "../../gen/output/cleaned_data.csv", row.names = FALSE)
 
