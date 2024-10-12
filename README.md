@@ -155,14 +155,14 @@ series.</td>
 
 
 
-![](README_files/plots/setup-1.png)
+![setup 1](https://github.com/course-dprep/IMDB-Binge-Factor/releases/download/v1.0/setup-1.png)
 
 #### Inference : 
 The graph demonstrates a significant spread of ratings across all episode counts, without any clear pattern or trend.Observations with a low number of episodes are densely populated and exhibit a wide range of ratings, spanning nearly the entire rating scale.As the number of episodes increases beyond 5,000, the density of observations decreases.
 
 
 
-![](README_files/plots/plot_setup-1.png)
+![plot setup 1](https://github.com/course-dprep/IMDB-Binge-Factor/releases/download/v1.0/plot_setup-1.png)
 
 #### Inference : 
 The scatter plot reveals a relatively uniform spread of average ratings across all series lengths, from shorter series (0–10 years) to longer ones (up to 80 years).
