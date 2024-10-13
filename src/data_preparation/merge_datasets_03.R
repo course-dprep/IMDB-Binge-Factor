@@ -21,5 +21,5 @@ merged_data <- title_basics_filtered %>%
 
 
 # --- Save Data --- #
-write.csv(merged_data, file = "../../gen/temp/merged_data.csv", row.names = FALSE)
+write_csv(merged_data, file = "../../gen/temp/merged_data.csv", row.names = FALSE)
 

@@ -227,6 +227,14 @@ https://github.com/course-dprep/IMDB-Binge-Factor.git
 
 ```
 
+Step 3: Use the following link to download the latest version of pandoc:
+
+```markdown
+
+https://www.youtube.com/watch?v=zxWNEN2hLRU
+
+```
+
 Source code can be run separately in the following order:
 
 download_data_01.R  

@@ -4,6 +4,7 @@ SHELL := /usr/bin/env bash
 # Directory definitions
 ROOT_DIR = ../..
 DATA = $(ROOT_DIR)/data
+GEN = $(ROOT_DIR)/gen
 TEMP = $(ROOT_DIR)/gen/temp
 OUTPUT = $(ROOT_DIR)/gen/output
 SRC = $(ROOT_DIR)/src
@@ -31,17 +32,16 @@ $(DATA)/title_basics.tsv.gz $(DATA)/title_episode.tsv.gz $(DATA)/title_ratings.t
 
 # 2: Impute, Drop Missing Values, and Filter TV Series
 $(TEMP)/title_basics_filtered.csv $(TEMP)/title_episode_filtered.csv: $(DROP_SCRIPT) $(DATA)/title_basics.tsv.gz $(DATA)/title_episode.tsv.gz $(DATA)/title_ratings.tsv.gz
+	R -e "dir.create('$(GEN)')"
 	R -e "dir.create('$(TEMP)')"
 	Rscript --vanilla "$(DROP_SCRIPT)"
 	
 # 3: Merge Datasets
 $(TEMP)/merged_data.csv: $(MERGE_SCRIPT) $(TEMP)/title_basics_filtered.csv $(TEMP)/title_episode_filtered.csv
-	R -e "dir.create('$(TEMP)')
 	Rscript --vanilla "$(MERGE_SCRIPT)"	
 
 # 4: Engineer Variables
 $(TEMP)/engineered_data.csv: $(ENGINEER_SCRIPT) $(TEMP)/merged_data.csv
-	R -e "dir.create('$(TEMP)')
 	Rscript --vanilla "$(ENGINEER_SCRIPT)"
 	
 # 5: Clean the Data
